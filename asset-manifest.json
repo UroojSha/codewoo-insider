@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/codewoo-insider/static/css/main.c5707453.css",
-    "main.js": "/codewoo-insider/static/js/main.3b0cb56f.js",
+    "main.js": "/codewoo-insider/static/js/main.4b9ed69b.js",
     "static/js/453.ed3810f9.chunk.js": "/codewoo-insider/static/js/453.ed3810f9.chunk.js",
     "static/media/slick.svg": "/codewoo-insider/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/codewoo-insider/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,11 +9,11 @@
     "static/media/slick.woff": "/codewoo-insider/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/codewoo-insider/index.html",
     "main.c5707453.css.map": "/codewoo-insider/static/css/main.c5707453.css.map",
-    "main.3b0cb56f.js.map": "/codewoo-insider/static/js/main.3b0cb56f.js.map",
+    "main.4b9ed69b.js.map": "/codewoo-insider/static/js/main.4b9ed69b.js.map",
     "453.ed3810f9.chunk.js.map": "/codewoo-insider/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c5707453.css",
-    "static/js/main.3b0cb56f.js"
+    "static/js/main.4b9ed69b.js"
   ]
 }
