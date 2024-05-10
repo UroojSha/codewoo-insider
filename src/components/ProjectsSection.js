@@ -15,7 +15,7 @@ const ProjectsSection = () => {
         </div>
         <div className="project project-tile">
           <a href="https://uroojsha.github.io/Classic-Snake-Game/" target="_blank" rel="noreferrer">
-            <img className="project-image" src="images/splash.png" alt="Classic Snake Game" />
+            <img className="project-image" src="https://drive.google.com/file/d/1JOtwF22fkPGbmWTM34COfeWRhlnjtQKO/view?ts=663e793b" alt="Classic Snake Game" />
             <p className="project-title">SplashColoringZone-React</p>
           </a>
         </div>
