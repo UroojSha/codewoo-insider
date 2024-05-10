@@ -15,7 +15,7 @@ const ProjectsSection = () => {
         </div>
         <div className="project project-tile">
           <a href="https://uroojsha.github.io/Classic-Snake-Game/" target="_blank" rel="noreferrer">
-            <img className="project-image" src="images/splash.PNG" alt="Classic Snake Game" />
+            <img className="project-image" src="images/splash.png" alt="Classic Snake Game" />
             <p className="project-title">SplashColoringZone-React</p>
           </a>
         </div>
@@ -27,13 +27,13 @@ const ProjectsSection = () => {
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.great-site.net/LittleCafe/index.html" target="_blank" rel="noreferrer">
-            <img className="project-image" src="https://uroojsha.github.io/codewoo-insider/images/littlecafe.png" alt="Little Cafe" />
+            <img className="project-image" src="images/littlecafe.png" alt="Little Cafe" />
             <p className="project-title">Little Cafe</p>
           </a>
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.infinityfreeapp.com/product/happy-ninja-2/" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/woocom.png" alt="Woocommerce Customisation" />
+            <img className="project-image" src="images/woocom.png" alt="Woocommerce Customisation" />
             <p className="project-title">Woocommerce Customisation</p>
           </a>
         </div>
@@ -45,61 +45,61 @@ const ProjectsSection = () => {
         </div>
         <div className="project project-tile">
           <a href="https://www.figma.com/proto/FKjMG2vuigMPMqok4Jw34c/Untitled?page-id=0%3A1&node-id=3-6&viewport=16%2C4592%2C1.49&scaling=scale-down" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/figma.png" alt="Woocommerce Customisation" />
+            <img className="project-image" src="images/figma.png" alt="Woocommerce Customisation" />
             <p className="project-title">Figma Designed Website</p>
           </a>
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.great-site.net/tribute%20page/index.html" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/cssflexbox.png" alt="Woocommerce Customisation" />
+            <img className="project-image" src="images/cssflexbox.png" alt="Woocommerce Customisation" />
             <p className="project-title">CSS Flexbox</p>
           </a>
         </div>
         <div className="project project-tile">
           <a href="https://uroojsha.github.io/Scancruit-website/" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/scanu.png" alt="Website Replica" />
+            <img className="project-image" src="images/scanu.png" alt="Website Replica" />
             <p className="project-title">Website Replica</p>
           </a>
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.great-site.net/W3%20%20CV/index.html" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/CV.png" alt="CV /portfolio" />
+            <img className="project-image" src="images/CV.png" alt="CV /portfolio" />
             <p className="project-title">"Interactive HTML/CSS Resume"</p>
           </a>
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.great-site.net/typography/index.html?i=1" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/typography.png" alt="Woocommerce Customisation" />
+            <img className="project-image" src="images/typography.png" alt="Woocommerce Customisation" />
             <p className="project-title">Typography</p>
           </a>
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.great-site.net/WebsitePro/index.html" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/coffee.png" alt="Woocommerce Customisation" />
+            <img className="project-image" src="images/coffee.png" alt="Woocommerce Customisation" />
             <p className="project-title">Website with HTML</p>
           </a>
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.great-site.net/form_/form.html" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/survey.png" alt="Woocommerce Customisation" />
+            <img className="project-image" src="images/survey.png" alt="Woocommerce Customisation" />
             <p className="project-title">Survey Form</p>
           </a>
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.great-site.net/tribute%20page/index.html" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/tribute.png" alt="Woocommerce Customisation" />
+            <img className="project-image" src="images/tribute.png" alt="Woocommerce Customisation" />
             <p className="project-title">Tribute Page</p>
           </a>
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.great-site.net/balancesheet/sheet.html" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/balancesheet.png" alt="Woocommerce Customisation" />
+            <img className="project-image" src="images/balancesheet.png" alt="Woocommerce Customisation" />
             <p className="project-title">Balance Sheet</p>
           </a>
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.great-site.net/boottra/boots.html" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/boots.png" alt="Woocommerce Customisation" />
+            <img className="project-image" src="images/boots.png" alt="Woocommerce Customisation" />
             <p className="project-title">Bootstrap Website</p>
           </a>
         </div>
