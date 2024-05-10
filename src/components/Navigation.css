@@ -1,0 +1,173 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0C0D14; /* Dark blue background */
+  color: #C5C6C8; /* Light gray text */
+  position: relative; /* Add position for the toggle button */
+}
+
+.brand-title {
+  font-size: 2em; /* Increase font size for impact */
+  color: #66FCF2; /* Light blue for brand consistency */
+  text-transform: uppercase; /* Capitalize for emphasis */
+  letter-spacing: 2px; /* Add spacing between letters */
+  margin: 25px;
+  padding: 10px 0; /* Add padding for visual comfort */
+  border-bottom: 3px solid #66FCF2; /* Underline effect */
+  display: inline-block; /* Allows the border to fit content width */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.brand-title:hover {
+  color: #C5C6C8; /* Change color on hover */
+  border-color: #C5C6C8; /* Change border color on hover */
+  transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+.navbar-links ul {
+  list-style: none;
+  margin: 0;
+  padding-right: 80px;
+  display: flex;
+}
+
+.navbar-links li {
+  padding: 0 1em;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #C5C6C8; /* Light gray text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  font-weight: 500; /* Medium boldness */
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth color and transform transition */
+}
+
+.navbar-links li a:hover,
+.navbar-links li a:active { /* Active state for current page */
+  color: #66FCF2; /* Light blue on hover/active */
+  transform: translateY(-2px); /* Slight lift effect on hover/active */
+}
+
+/* Underline effect */
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Positioning adjustment */
+  left: 0;
+  width: 0; /* Start with no underline */
+  height: 2px;
+  background-color: #66FCF2; /* Light blue underline */
+  transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.navbar-links li a:hover::after,
+.navbar-links li a:active::after { /* Active state for current page */
+  width: 100%; /* Full underline on hover/active */
+}
+
+/* Toggle button styling */
+.toggle-button {
+  position: absolute;
+  right: 2em;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 27px;
+  cursor: pointer; /* Add cursor pointer for interaction */
+}
+
+.toggle-button .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #C5C6C8; /* Light gray bars */
+  border-radius: 10px;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Animate bars on hover */
+.toggle-button:hover .bar {
+  background-color: #66FCF2; /* Light blue bars on hover */
+}
+
+/* Transform bars into 'X' on toggle */
+.toggle-button.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.toggle-button.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-button.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+    padding: 0.5em ;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5em 1em;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+@keyframes riseBubbleNav {
+  0% {
+    bottom: -50px; /* Start below the navbar */
+    transform: scale(0.5); /* Start smaller */
+  }
+  100% {
+    bottom: 100%; /* End above the navbar */
+    transform: scale(1); /* End at normal size */
+  }
+}
+
+.navbar::before,
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%; /* Adjust as needed */
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
+  background: #66FCF2; /* Light blue color for the bubble */
+  border-radius: 50%; /* Make it round */
+  opacity: 0.5; /* Slightly transparent */
+  animation: riseBubbleNav 15s ease-in infinite;
+}
+
+.navbar::after {
+  left: 80%; /* Different starting position */
+  width: 30px; /* Larger bubble */
+  height: 30px;
+  opacity: 0.3; /* More transparent */
+  animation-delay: 7s; /* Delayed start */
+}

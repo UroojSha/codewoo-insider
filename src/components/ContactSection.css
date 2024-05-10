@@ -1,0 +1,95 @@
+.contact-section {
+  background-color: #0C0D14; /* Dark blue background */  padding: 50px 0;
+  text-align: center;
+  color: #C5C6C8; /* Light gray text */
+  padding: 100px;
+}
+.contact-heading{
+  font-size: 28px; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #66FCF2; /* Light blue text for consistency with the website's accent color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Match the font family */
+  margin-bottom: 80px; /* Add some bottom margin for spacing */
+  text-transform: uppercase; /* Transform to uppercase for emphasis */
+  letter-spacing: 1px; /* Add some letter spacing for clarity */
+}
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px 20px;
+ border: 2px solid #66FCF2; /* Light blue border for consistency */
+  color: #66FCF2; /* Light blue text for consistency */  border-radius: 20px;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s, border-color 0.3s, color 0.3s, background-color 0.3s; /* Added transition for background-color */
+}
+
+.contact-link:hover {
+  background-color: #005b7f; /* Darker shade of blue */
+  border-color: #005b7f; /* Darker shade of blue */
+  color: #fff;
+  transform: translateY(-3px); /* Add a slight lift effect on hover */
+}
+
+.contact-link span {
+  margin-left: 10px;
+}
+
+.contact-link svg {
+  transition: transform 0.3s;
+}
+
+.contact-link:hover svg {
+  transform: scale(1.1); /* Scale up the icon on hover */
+}
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+.contact-section {
+  /* ... existing styles ... */
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #66FCF2; /* Light blue color for the ripple */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.contact-section:hover::after {
+  animation: ripple 1s ease-out infinite;
+}
+
+/* Add a subtle glow to the contact links on hover */
+.contact-link:hover {
+  /* ... existing styles ... */
+  box-shadow: 0 0 15px #66FCF2; /* Light blue glow effect */
+}

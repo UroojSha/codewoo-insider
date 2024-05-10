@@ -1,0 +1,192 @@
+.welcome-section {
+  position: relative;
+  padding: 120px 0;
+  text-align: center;
+  background-color: #0C0D14; /* Dark blue background */
+  color: white;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+}
+
+.welcome-content {
+  max-width: 50%; /* Take up half of the section width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  padding: 0 20px; /* Add some padding for spacing */
+}
+
+.welcome-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0C0D14 0%, #1B263B 50%, #415A77 100%);
+}
+
+/* Animation */
+.show {
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition for reveal */
+}
+
+.welcome-heading,
+.welcome-text {
+  opacity: 0; /* Set initial state to invisible */
+  transform: translateY(20px); /* Start slightly below */
+}
+
+.welcome-section.show .welcome-heading,
+.welcome-section.show .welcome-text {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to original position */
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation */
+.welcome-heading,
+.welcome-text {
+  animation: slideFadeIn 0.8s ease forwards; /* Animation with delay */
+}
+
+@media screen and (max-width: 768px) {
+  /* ... existing responsive styles ... */
+}
+
+.welcome-heading {
+  font-size: 48px;
+  color: #66FCF2; /* Light blue */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 10px; /* Adjust margin for spacing */
+}
+
+.welcome-text {
+  font-size: 24px; /* Increase font size */
+  color: #fae7e7; /* Turquoise */
+  font-weight: bold; /* Make it bold */
+  margin-bottom: 30px; /* Add some bottom margin for spacing */
+}
+.welcome-section {
+  /* ... existing styles ... */
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); /* Vibrant gradient background */
+  overflow: hidden; /* Hide overflow for any shapes that might go out of bounds */
+}
+
+/* Animated shapes in the background */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.welcome-overlay::before,
+.welcome-overlay::after {
+  content: '';
+  position: absolute;
+  top: -50px; /* Position the shapes above the section */
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: #66FCF2; /* Light blue color for the shape */
+  border-radius: 50%; /* Make it a circle */
+  opacity: 0.6; /* Slightly transparent */
+  animation: float 6s ease-in-out infinite; /* Apply floating animation */
+}
+
+.welcome-overlay::after {
+  top: auto;
+  bottom: -50px; /* Position the shape at the bottom */
+  left: 10%;
+  width: 150px;
+  height: 150px;
+  background: #45A29E; /* Turquoise color for the shape */
+}
+
+/* Enhanced text styles for better readability */
+.welcome-heading,
+.welcome-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+}
+
+/* Hover effect for interactive elements */
+.welcome-heading:hover,
+.welcome-text:hover {
+  text-decoration: underline; /* Underline on hover for interactivity */
+  cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .welcome-heading {
+    font-size: 36px; /* Adjust font size for smaller screens */
+  }
+  .welcome-text {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+@keyframes riseBubble {
+  0% {
+    bottom: -100px;
+    transform: scale(0.5);
+    background: rgba(102, 204, 255, 0.7); /* Lighter blue at the start */
+  }
+  50% {
+    background: rgba(51, 153, 255, 0.7); /* Medium blue in the middle */
+  }
+  100% {
+    bottom: 110%;
+    transform: scale(1.2);
+    background: rgba(12, 13, 20, 0.7); /* Dark blue to match the website theme */
+  }
+}
+
+.welcome-section::before,
+.welcome-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%; /* Adjust as needed */
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: riseBubble 25s ease-in infinite;
+}
+
+.welcome-section::after {
+  left: 90%; /* Different starting position */
+  width: 60px; /* Larger bubble */
+  height: 60px;
+  opacity: 0.5;
+  animation-delay: 5s; /* Delayed start */
+}
+/* New medium-sized bubble on the right side */
+.welcome-section::after {
+  content: '';
+  position: absolute ;
+  bottom: 10%; /* Adjust as needed for vertical positioning */
+  right: 100%; /* Place it on the right side */
+  width: 80px; /* Medium size */
+  height: 80px;
+  background: #66FCF2; /* Light blue color for the bubble */
+  border-radius: 50%; /* Make it round */
+  opacity: 0.5; /* Slightly transparent */
+  animation: float 6s ease-in-out infinite; /* Apply floating animation */
+  animation-delay: 3s; /* Delayed start for variety */
+}
+/* Add more bubbles with different sizes, positions, and timings to create a natural effect */

@@ -1,0 +1,47 @@
+/* Footer Styles */
+@keyframes movePattern {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+.footer {
+  background-color: #0C0D14; /* Matching the website's color scheme */
+  color: #C5C6C8; /* Light gray text for contrast */
+  padding: 40px 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(45deg, rgba(12, 13, 20, 0.2) 25%, transparent 25%, transparent 75%, rgba(12, 13, 20, 0.2) 75%, rgba(12, 13, 20, 0.2)), linear-gradient(45deg, rgba(12, 13, 20, 0.2) 25%, transparent 25%, transparent 75%, rgba(12, 13, 20, 0.2) 75%, rgba(12, 13, 20, 0.2));
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  animation: movePattern 20s linear infinite;
+}
+
+.footer-content {
+  margin-bottom: 15px;
+}
+
+.footer-bottom {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer a {
+  color: #66FCF2; /* Cyan text for links */
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer a:hover {
+  color: #46A29F; /* Darker cyan on hover */
+  text-shadow: 0 0 10px #66FCF2; /* Cyan glow effect */
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 20px 0;
+  }
+
+  .contact-details {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,63 @@
+.projects-section {
+  background-color: #1B263B; /* Slightly lighter shade of dark blue */
+  padding: 60px 0;
+  text-align: center;
+  color: #C5C6C8; /* Light gray text for contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistent font family */
+}
+.project-heading {
+  font-size: 28px; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #66FCF2; /* Light blue text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Match the font family */
+  margin-bottom: 80px; /* Add some bottom margin for spacing */
+  text-transform: uppercase; /* Transform to uppercase for emphasis */
+  letter-spacing: 1px; /* Add some letter spacing for clarity */
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 30px;
+}
+
+.project-tile {
+  border: 1px solid #66FCF2; /* Light blue border */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for transform and box-shadow */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.project-tile:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  display: block;
+}
+
+.project-title {
+  font-size: 20px; /* Increase font size */
+  margin: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Match the font family */
+  color: aliceblue;
+  text-transform: uppercase; /* Transform to uppercase for emphasis */
+  letter-spacing: 1px; /* Add some letter spacing for clarity */
+  text-decoration: none !important; /* Remove underline */
+}
+
+.project-title a {
+  color: #66FCF2; /* Light blue text */
+  text-decoration: none !important; /* Remove underline */ 
+   transition: color 0.3s;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+.project-title a:hover {
+  color: #46A29F; /* Dark cyan on hover */
+}

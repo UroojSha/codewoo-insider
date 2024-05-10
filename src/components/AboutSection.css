@@ -1,0 +1,77 @@
+/* AboutSection.css */
+.about-section {
+    background-color: #172A45; /* Deep navy blue */
+    color: #C0C0C0; /* Light gray text color for contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 4px solid cyan;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05); /* Slight overlay */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-heading {
+    color: cyan;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Larger heading size */
+  }
+  
+  .about-text, .skills-list, .difference-list, .connect-text {
+    color: #C0C0C0;
+    line-height: 1.6;
+  }
+  
+  .skills-heading, .difference-heading, .connect-heading {
+    color: cyan;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 2rem; /* Larger subheading size */
+  }
+  
+  .skills-list, .difference-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills-list li, .difference-list li {
+    margin-bottom: 10px; /* Spacing between list items */
+  }
+  
+  .skills-list li::before, .difference-list li::before {
+    content: '•';
+    color: cyan;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  .connect-text {
+    margin-top: 20px;
+  }
+  
+  .connect-text a {
+    color: cyan;
+    text-decoration: none;
+    border-bottom: 1px solid transparent; /* Prepare for hover effect */
+    transition: border-color 0.3s ease;
+  }
+  
+  .connect-text a:hover {
+    border-color: cyan; /* Underline effect on hover */
+  }
+  
