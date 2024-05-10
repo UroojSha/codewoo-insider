@@ -27,7 +27,7 @@ const ProjectsSection = () => {
         </div>
         <div className="project project-tile">
           <a href="http://codewooinsider.great-site.net/LittleCafe/index.html" target="_blank" rel="noreferrer">
-            <img className="project-image" src="/images/littlecafe.png" alt="Little Cafe" />
+            <img className="project-image" src="https://uroojsha.github.io/codewoo-insider/images/littlecafe.png" alt="Little Cafe" />
             <p className="project-title">Little Cafe</p>
           </a>
         </div>
