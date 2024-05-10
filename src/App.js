@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'; // Import HashRouter instead of BrowserRouter
 import Navigation from './components/Navigation'; // Import the Navigation component
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -7,7 +7,6 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 
 import './App.css';
-
 
 const App = () => {
   return (
