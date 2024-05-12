@@ -1,6 +1,6 @@
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'; // Import HashRouter instead of BrowserRouter
-import Navigation from './components/Navigation'; // Import the Navigation component
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
@@ -11,9 +11,10 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-      <Navigation /> {/* Include the Navigation component */}
+      <Navigation />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route path="/" element={<Navigate to="/home" />} /> {/* Redirect to Home by default */}
+        <Route path="/home" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

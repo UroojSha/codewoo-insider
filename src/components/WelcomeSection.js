@@ -14,12 +14,14 @@ const WelcomeSection = () => {
         }
       });
     });
-
-    observer.observe(welcomeRef.current);
-
+  
+    const currentRef = welcomeRef.current; // Store the current value of welcomeRef.current
+  
+    observer.observe(currentRef);
+  
     return () => {
-      if (welcomeRef.current) {
-        observer.unobserve(welcomeRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

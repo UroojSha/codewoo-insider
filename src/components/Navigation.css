@@ -1,173 +1,190 @@
-/* Navbar Styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0C0D14; /* Dark blue background */
-  color: #C5C6C8; /* Light gray text */
-  position: relative; /* Add position for the toggle button */
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-.brand-title {
-  font-size: 2em; /* Increase font size for impact */
-  color: #66FCF2; /* Light blue for brand consistency */
-  text-transform: uppercase; /* Capitalize for emphasis */
-  letter-spacing: 2px; /* Add spacing between letters */
-  margin: 25px;
-  padding: 10px 0; /* Add padding for visual comfort */
-  border-bottom: 3px solid #66FCF2; /* Underline effect */
-  display: inline-block; /* Allows the border to fit content width */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.brand-title:hover {
-  color: #C5C6C8; /* Change color on hover */
-  border-color: #C5C6C8; /* Change border color on hover */
-  transform: scale(1.05); /* Slight increase in size on hover */
-}
-
-.navbar-links ul {
-  list-style: none;
+body {
   margin: 0;
-  padding-right: 80px;
-  display: flex;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fcfcfc;
 }
 
-.navbar-links li {
-  padding: 0 1em;
+.topnav {
+  background-color: #0C0D14 ; /* Dark blue */
+  overflow: hidden;
 }
 
-.navbar-links li a {
+/* Updated Logo Styles with Neon Glow Effect */
+.logo {
+  float: left;
+  padding: 20px 50px;
+}
+
+.logo-link {
+  color: #fff; /* White */
+  font-size: 20px;
   text-decoration: none;
-  color: #C5C6C8; /* Light gray text */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-  font-weight: 500; /* Medium boldness */
+  font-family: 'Poppins', sans-serif;
   position: relative;
-  transition: color 0.3s ease, transform 0.2s ease; /* Smooth color and transform transition */
 }
 
-.navbar-links li a:hover,
-.navbar-links li a:active { /* Active state for current page */
-  color: #66FCF2; /* Light blue on hover/active */
-  transform: translateY(-2px); /* Slight lift effect on hover/active */
-}
-
-/* Underline effect */
-.navbar-links li a::after {
+.logo-link::before, .logo-link::after {
   content: '';
   position: absolute;
-  bottom: -5px; /* Positioning adjustment */
+  top: 0;
   left: 0;
-  width: 0; /* Start with no underline */
-  height: 2px;
-  background-color: #66FCF2; /* Light blue underline */
-  transition: width 0.3s ease; /* Smooth width transition */
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #66FCF2, #0C0D14, gray);
+  clip-path: polygon(0 0, 0% 100%, 0 100%);
+  transition: clip-path 0.5s ease-in-out;
 }
 
-.navbar-links li a:hover::after,
-.navbar-links li a:active::after { /* Active state for current page */
-  width: 100%; /* Full underline on hover/active */
+.logo-link::after {
+  background: linear-gradient(45deg, gray, #0C0D14, #66FCF2);
+  clip-path: polygon(100% 0, 100% 100%, 100% 100%);
 }
 
-/* Toggle button styling */
-.toggle-button {
-  position: absolute;
-  right: 2em;
+
+
+/* Neon Glow Effect */
+@keyframes neonGlow {
+  from {
+    text-shadow: 0 0 10px #66FCF2, 0 0 20px #66FCF2, 0 0 30px #66FCF2, 0 0 40px #66FCF2, 0 0 50px #66FCF2, 0 0 60px #66FCF2, 0 0 70px #66FCF2;
+  }
+  to {
+    text-shadow: 0 0 5px #66FCF2, 0 0 10px #66FCF2, 0 0 15px #66FCF2, 0 0 20px #66FCF2, 0 0 25px #66FCF2, 0 0 30px #66FCF2, 0 0 35px #66FCF2;
+  }
+}
+
+.logo-link {
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+
+.nav-links {
+  float: right;
+  padding: 20px;
+}
+
+.nav-link {
+  color: #fff; /* White */
+  font-size: 16px;
+  text-decoration: none;
+  margin-right: 30px;
+  margin-left: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #00bcd4; /* Cyan */
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropbtn {
+  font-size: 16px;
+  color: #fff; /* White */
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.dropbtn:hover {
+  color: #00bcd4; /* Cyan */
+}
+
+.dropdown-content {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 35px;
-  height: 27px;
-  cursor: pointer; /* Add cursor pointer for interaction */
+  position: absolute;
+  background-color: #283d4b; /* Dark blue */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.toggle-button .bar {
-  height: 4px;
-  width: 100%;
-  background-color: #C5C6C8; /* Light gray bars */
-  border-radius: 10px;
-  transition: background-color 0.3s ease; /* Smooth color transition */
+.dropdown-content a {
+  color: #fff; /* White */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-/* Animate bars on hover */
-.toggle-button:hover .bar {
-  background-color: #66FCF2; /* Light blue bars on hover */
+.dropdown-content a:hover {
+  background-color: #00bcd4; /* Cyan */
 }
 
-/* Transform bars into 'X' on toggle */
-.toggle-button.active .bar:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
+.icon {
+  display: none;
 }
 
-.toggle-button.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.toggle-button.active .bar:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-/* Media query for small screens */
-@media (max-width: 768px) {
-  .toggle-button {
-    display: flex;
+@media screen and (max-width: 768px) {
+  .topnav {
+    overflow: hidden;
+  }
+  
+  .logo {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+  }
+  
+  .logo-link {
+    font-size: 18px;
   }
 
-  .navbar-links {
+  .nav-links {
     display: none;
     width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .navbar-links ul li {
     text-align: center;
-    padding: 0.5em ;
   }
-
-  .navbar-links ul li a {
-    padding: 0.5em 1em;
+  
+  .nav-links a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #fff; /* White */
   }
-
-  .navbar-links.active {
-    display: flex;
+  
+  
+  
+  .icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 11px 14px;
+    background-color: #0C0D14;
+    color: #fff; /* White */
+    border: none;
+    cursor: pointer;
   }
-}
-
-@keyframes riseBubbleNav {
-  0% {
-    bottom: -50px; /* Start below the navbar */
-    transform: scale(0.5); /* Start smaller */
+  
+  .responsive {
+    position: relative;
   }
-  100% {
-    bottom: 100%; /* End above the navbar */
-    transform: scale(1); /* End at normal size */
+  
+  .responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
-}
-
-.navbar::before,
-.navbar::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 10%; /* Adjust as needed */
-  width: 20px; /* Adjust size as needed */
-  height: 20px;
-  background: #66FCF2; /* Light blue color for the bubble */
-  border-radius: 50%; /* Make it round */
-  opacity: 0.5; /* Slightly transparent */
-  animation: riseBubbleNav 15s ease-in infinite;
-}
-
-.navbar::after {
-  left: 80%; /* Different starting position */
-  width: 30px; /* Larger bubble */
-  height: 30px;
-  opacity: 0.3; /* More transparent */
-  animation-delay: 7s; /* Delayed start */
+  
+  .responsive .nav-links {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .responsive .nav-links a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a {
+    color: #fff; /* White */
+    text-align: center;
+  }
 }

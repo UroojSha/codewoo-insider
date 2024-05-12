@@ -28,7 +28,7 @@ const SkillsSection = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -36,7 +36,7 @@ const SkillsSection = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 3
         }
       }
     ]
