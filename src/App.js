@@ -12,12 +12,12 @@ const App = () => {
   return (
     <Router>
       <Navigation />
-      <Routes>
-        <Route path="/portfolio" element={<Home />} />
-        <Route path="/portfolio/projects" element={<Projects />} />
-        <Route path="/portfolio/about" element={<About />} />
-        <Route path="/portfolio/contact" element={<Contact />} />
-      </Routes>
+    <Routes>
+      <Route path="/codewoo-insider" element={<Home />} />
+      <Route path="/codewoo-insider/projects" element={<Projects />} />
+      <Route path="/codewoo-insider/about" element={<About />} />
+      <Route path="/codewoo-insider/contact" element={<Contact />} />
+    </Routes>
     </Router>
   );
 };
