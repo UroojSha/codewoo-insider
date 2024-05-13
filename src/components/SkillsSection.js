@@ -10,7 +10,8 @@ import {
   faJs, // Corrected import
   faBootstrap,
   faReact,
-  faGithub
+  faGithub,
+  faFigma
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -30,6 +31,7 @@ const skills = [
   { name: 'Bootstrap', icon: faBootstrap },
   { name: 'React', icon: faReact },
   { name: 'GitHub', icon: faGithub }, // Corrected icon
+  { name: 'Figma', icon: faFigma }, // Corrected icon
   { name: 'SEO', icon: faSearch },
   { name: 'Server Management', icon: faServer },
   { name: 'UX/UI', icon: faPaintBrush },
@@ -43,6 +45,8 @@ const SkillsSection = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 2,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000, // Adjust autoplay speed
     responsive: [
       {
         breakpoint: 768,
@@ -61,7 +65,7 @@ const SkillsSection = () => {
 
   return (
     <div className='skills-section'>
-      <h2>My Skills</h2>
+      <h2>Professional Skills</h2>
       <Slider {...settings}>
         {skills.map((skill) => (
           <div key={skill.name} className='skill'>

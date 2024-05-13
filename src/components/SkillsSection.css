@@ -1,16 +1,22 @@
 .skills-section {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   background: #0C0D14; /* Dark blue background */
   padding: 2rem;
-  border-radius: 15px;
+  padding-bottom: 100px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .skills-section h2 {
-  color: #f8f9fa; /* Light color for contrast */
-  margin-bottom: 1rem;
+  
+  font-size: 28px; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #66FCF2; /* Light blue text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Match the font family */
+  margin-bottom: 80px; /* Add some bottom margin for spacing */
+  text-transform: uppercase; /* Transform to uppercase for emphasis */
+  letter-spacing: 1px; /* Add some letter spacing for clarity */
 }
 
 .skill {
@@ -24,29 +30,33 @@
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
+.slick-dots
+{
+    bottom: -60px;
+}
 /* Original icon colors maintained */
 .fa-wordpress { color: #21759b; } /* WordPress */
-.fa-php { color: #777bb4; } /* PHP */
+.fa-php { color:  #4E5B93; } /* PHP */
 .fa-html5 { color: #e34f26; } /* HTML5 */
 .fa-css3-alt { color: #1572b6; } /* CSS3 */
 .fa-js { color: #f7df1e; } /* JavaScript */
-.fa-bootstrap { color: #563d7c; } /* Bootstrap */
+.fa-bootstrap { color: #a73ec7; } /* Bootstrap */
 .fa-react { color: #61dafb; } /* React */
-.fa-github { color: #333; } /* GitHub */
-.fa-server { color: #4d4d4e; } /* Server */
-.fa-search { color: #505050; } /* Search */
-.fa-paint-brush { color: #cb4b16; } /* Paint Brush */
+.fa-github { color: #f4f4f4; } /* GitHub */
+.fa-figma { color: #f4f4f4; } /* figma */
+.fa-server { color: #ffffff; } /* Server */
+.fa-magnifying-glass { color: #ffffff; } /* Search */
+.fa-paintbrush { color: #ff0000; } /* Paint Brush */
 
 /* Add more icons with their original colors as needed */
 
 /* Slider Arrows enhanced look */
-.slick-prev, .slick-next {
-  background: #0C0D14; /* Dark blue background */
-  border-radius: 50%;
-  padding: 5px;
-  transition: background-color 0.3s ease-in-out;
+
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
 }
+
 
 .slick-prev:hover, .slick-next:hover {
   background-color: #00B4D8; /* Cyan color for hover */
@@ -69,3 +79,14 @@
     margin-bottom: 1rem; /* Added space between skills on smaller screens */
   }
 }
+
+
+
+
+/* Add a scale effect on hover */
+.skill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
