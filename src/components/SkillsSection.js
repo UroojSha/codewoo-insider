@@ -7,100 +7,70 @@ import {
   faPhp,
   faHtml5,
   faCss3Alt,
-  faJs,
+  faJs, // Corrected import
   faBootstrap,
   faReact,
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
-  faDatabase,
   faServer,
   faSearch,
-  faUser,
   faPaintBrush
-} from '@fortawesome/free-solid-svg-icons'; // Change the import source to free-solid-svg-icons
+} from '@fortawesome/free-solid-svg-icons'; // Corrected import
 import Slider from 'react-slick';
-import './SkillsSection.css'; // Import the CSS file with the provided styles
+import './SkillsSection.css'; 
+
+const skills = [
+  { name: 'WordPress', icon: faWordpress },
+  { name: 'PHP', icon: faPhp },
+  { name: 'HTML5', icon: faHtml5 },
+  { name: 'CSS', icon: faCss3Alt },
+  { name: 'JavsScript', icon: faJs },
+  { name: 'Bootstrap', icon: faBootstrap },
+  { name: 'React', icon: faReact },
+  { name: 'GitHub', icon: faGithub }, // Corrected icon
+  { name: 'SEO', icon: faSearch },
+  { name: 'Server Management', icon: faServer },
+  { name: 'UX/UI', icon: faPaintBrush },
+  // ... add other skills with corresponding FontAwesome icons
+];
 
 const SkillsSection = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    slidesToShow: 4,
+    slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3
-        }
-      }
-    ]
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <section className="skills-section">
-      <h2 className="professional-skills-heading">Professional Skills</h2>
+    <div className='skills-section'>
+      <h2>My Skills</h2>
       <Slider {...settings}>
-        <div className="skill">
-          <FontAwesomeIcon icon={faWordpress} className="icon wordpress" />
-          <span>WordPress Development</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faPhp} className="icon php" />
-          <span>PHP</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faHtml5} className="icon html5" />
-          <span>HTML</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faCss3Alt} className="icon css3" />
-          <span>CSS</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faJs} className="icon js" />
-          <span>JavaScript</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faBootstrap} className="icon bootstrap" />
-          <span>Bootstrap</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faReact} className="icon react" />
-          <span>React</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faDatabase} className="icon database" />
-          <span>Database Management</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faServer} className="icon server" />
-          <span>Server Management</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faSearch} className="icon seo" />
-          <span>SEO</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faUser} className="icon uiux" />
-          <span>UI/UX</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faPaintBrush} className="icon figma" />
-          <span>Figma</span>
-        </div>
-        <div className="skill">
-          <FontAwesomeIcon icon={faGithub} className="icon github" />
-          <span>Github</span>
-        </div>
-        {/* Add more skills */}
+        {skills.map((skill) => (
+          <div key={skill.name} className='skill'>
+            <FontAwesomeIcon icon={skill.icon} size='4x' />
+            <p>{skill.name}</p>
+          </div>
+        ))}
       </Slider>
-    </section>
+    </div>
   );
 };
 

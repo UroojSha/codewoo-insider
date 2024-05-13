@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -13,11 +13,10 @@ const App = () => {
     <Router>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Navigate to="/home" />} /> {/* Redirect to Home by default */}
-        <Route path="/home" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Home />} />
+        <Route path="/portfolio/projects" element={<Projects />} />
+        <Route path="/portfolio/about" element={<About />} />
+        <Route path="/portfolio/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
