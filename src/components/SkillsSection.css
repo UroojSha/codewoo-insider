@@ -20,7 +20,8 @@
 }
 
 .skill {
-  padding: 1rem;
+  padding: 1.5rem;
+  color: gray;;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   border: 2px solid #00B4D8; /* Cyan color for border */
   border-radius: 10px;
@@ -51,15 +52,14 @@
 /* Add more icons with their original colors as needed */
 
 /* Slider Arrows enhanced look */
-
-
-.slick-prev:before, .slick-next:before {
-  font-size: 30px;
+.slick-dots li button{
+  color: #ffffff;
 }
 
 
+
 .slick-prev:hover, .slick-next:hover {
-  background-color: #00B4D8; /* Cyan color for hover */
+  background-color: #00d5ff; /* Cyan color for hover */
 }
 /* Dots color changed to cyan */
 .slick-dots li button:before {
@@ -72,16 +72,21 @@
 /* Responsive Settings */
 @media (max-width: 768px) {
   .skills-section {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .skill {
     margin-bottom: 1rem; /* Added space between skills on smaller screens */
   }
+  .skills-section h2 {
+  
+    font-size: 22px; /* Increase font size */
+    
 }
-
-
-
+.slick-dots
+{
+    bottom: -25px;
+}
 
 /* Add a scale effect on hover */
 .skill:hover {
@@ -90,3 +95,4 @@
 }
 
 
+}

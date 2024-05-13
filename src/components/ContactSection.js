@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faGithub, faLinkedin, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import './ContactSection.css';
 
@@ -17,13 +17,13 @@ const ContactSection = () => {
           <FontAwesomeIcon icon={faGithub} />
           <span>GitHub</span>
         </a>
-        <a href="https://twitter.com/CodeWooInsider" target="_blank" rel="noreferrer" className="contact-link">
+        <a href="https://www.linkedin.com/in/urooj-shafait-9570a51a9/" target="_blank" rel="noreferrer" className="contact-link">
           <FontAwesomeIcon icon={faLinkedinIn} />
           <span>Linkedin</span>
         </a>
         <a href="mailto:urooj_shafait292@hotmail.com" rel="noreferrer" className="contact-link">
           <FontAwesomeIcon icon={faEnvelope} />
-          <span>Send an Email</span>
+          <span>Email</span>
         </a>
         <a href="tel:+44 7366622536" rel="noreferrer" className="contact-link">
           <FontAwesomeIcon icon={faPhone} />

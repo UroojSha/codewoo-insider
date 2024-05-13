@@ -93,3 +93,9 @@
   /* ... existing styles ... */
   box-shadow: 0 0 15px #66FCF2; /* Light blue glow effect */
 }
+@media (max-width: 768px) {
+  .contact-heading{
+    font-size: 22px;
+}
+
+}

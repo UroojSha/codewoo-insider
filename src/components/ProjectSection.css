@@ -61,3 +61,8 @@ a:-webkit-any-link {
 .project-title a:hover {
   color: #46A29F; /* Dark cyan on hover */
 }
+@media (max-width: 768px) {
+ .project-heading{
+  font-size: 22px;
+ }  
+}
