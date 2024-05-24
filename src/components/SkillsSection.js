@@ -24,12 +24,14 @@ import './SkillsSection.css';
 
 const skills = [
   { name: 'WordPress', icon: faWordpress },
+  { name: 'Shopify', icon: faShopify },
   { name: 'PHP', icon: faPhp },
   { name: 'HTML5', icon: faHtml5 },
   { name: 'CSS', icon: faCss3Alt },
   { name: 'JavsScript', icon: faJs },
   { name: 'Bootstrap', icon: faBootstrap },
   { name: 'React', icon: faReact },
+  { name: 'Liquid', icon: faLiquid },
   { name: 'GitHub', icon: faGithub }, // Corrected icon
   { name: 'Figma', icon: faFigma }, // Corrected icon
   { name: 'SEO', icon: faSearch },
