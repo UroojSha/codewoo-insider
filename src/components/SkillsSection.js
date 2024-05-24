@@ -4,12 +4,14 @@ import 'slick-carousel/slick/slick-theme.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faWordpress,
+  faShopify,
   faPhp,
   faHtml5,
   faCss3Alt,
   faJs, // Corrected import
   faBootstrap,
   faReact,
+  faLiquid,
   faGithub,
   faFigma
 } from '@fortawesome/free-brands-svg-icons';
