@@ -8,6 +8,12 @@ const ProjectsSection = () => {
       <div className="projects-grid">
         {/* Project tiles */}
         <div className="project project-tile">
+          <a href="https://rijschoolwebdesign.nl/" target="_blank" rel="noreferrer">
+            <img className="project-image" src="https://i.ibb.co/gJnFxwJ/Screenshot-2024-05-31-at-11-41-22.png" alt="Wordpress Website" />
+            <p className="project-title">DEMENTOR Website</p>
+          </a>
+        </div>
+        <div className="project project-tile">
           <a href="https://uroojsha.github.io/Classic-Snake-Game/" target="_blank" rel="noreferrer">
             <img className="project-image" src="https://miro.medium.com/v2/resize:fit:1400/1*spTwLANfg8qPWZ0-5bt1pQ.png" alt="Classic Snake Game" />
             <p className="project-title">Classic Snake Game-React</p>
